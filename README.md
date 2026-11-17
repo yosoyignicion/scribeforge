@@ -4,18 +4,34 @@
 
 Utilidad CLI en Python para creadores, periodistas e investigadores: procesa audio/vídeo de **cualquier duración**, transcribe con [`faster-whisper`](https://github.com/SYSTRAN/faster-whisper) (CTranslate2) y genera actas, informes de entrevista o apuntes de clase con un LLM — local (Ollama/LM Studio) o híbrido (Groq).
 
+## 🎬 Demo
+
+**Pipeline completo en 4 pasos** (audio de 37 s, modelo `base`, CPU — 77 s de reloj):
+
+![Ejecución de scribeforge en terminal](docs/demo-run.png)
+
+**El resumen generado** (acta con front-matter auto-documentado, decisiones y action items):
+
+![Acta generada por el modo meeting](docs/demo-summary.png)
+
+<details>
+<summary>Salida cruda del comando</summary>
+
 ```
-$ scribeforge reunion_equipo.mp4 --mode meeting
-[1/4] Extrayendo audio (78.3 min)…
-[2/4] Transcribiendo con modelo 'small'…
+$ scribeforge reunion_demo.wav --mode meeting --model base
+[1/4] Extrayendo audio (0.6 min)…
+[2/4] Transcribiendo con modelo 'base'…
 [3/4] Escribiendo transcripción (txt/srt/json)…
 [4/4] Resumen modo 'meeting'…
 Listo. Archivos generados:
-  - [txt] outputs/reunion_equipo-20261110-2218/transcripcion.txt
-  - [srt] outputs/reunion_equipo-20261110-2218/transcripcion.srt
-  - [json] outputs/reunion_equipo-20261110-2218/transcripcion.json
-  - [md] outputs/reunion_equipo-20261110-2218/resumen.md
+  - [txt] outputs/reunion_demo-20261117-0555/transcripcion.txt
+  - [srt] outputs/reunion_demo-20261117-0555/transcripcion.srt
+  - [json] outputs/reunion_demo-20261117-0555/transcripcion.json
+  - [md] outputs/reunion_demo-20261117-0555/resumen.md
+Tiempo total: 77.7s
 ```
+
+</details>
 
 ## 🆚 Por qué no otra cosa
 
