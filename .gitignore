@@ -1,0 +1,6 @@
+# ScribeForge
+outputs/
+config.yaml
+.venv/
+__pycache__/
+*.egg-info/
