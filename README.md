@@ -1,5 +1,7 @@
 # ⚒️ ScribeForge-Local
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![License](https://img.shields.io/badge/licencia-MIT-green) ![Tests](https://img.shields.io/badge/tests-30%20%2B%20QA%20E2E-brightgreen) ![Telemetría](https://img.shields.io/badge/telemetr%C3%ADa-ninguna-success) ![Modelo](https://img.shields.io/badge/transcripci%C3%B3n-100%25%20local-orange)
+
 > **Transcripción local con precisión quirúrgica + resúmenes LLM. Sin APIs de pago, sin muros de minutos.**
 
 Utilidad CLI en Python para creadores, periodistas e investigadores: procesa audio/vídeo de **cualquier duración**, transcribe con [`faster-whisper`](https://github.com/SYSTRAN/faster-whisper) (CTranslate2) y genera actas, informes de entrevista o apuntes de clase con un LLM — local (Ollama/LM Studio) o híbrido (Groq).
